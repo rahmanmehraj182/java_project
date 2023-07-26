@@ -315,26 +315,46 @@ public class Main {
                         System.out.println("Stduent Id didn't matched");
                     }
                 }else if(n == 32){
-                    
-                    String id;
-                    System.out.println("Enter Course Id: ");
-                    id = inp.nextLine();
-                    
-                    int ind = -1, f = 0;
-        
-                    for(int i = 0; i < cList.size(); ++i){
+                    System.out.println("321. Update Course Name");
+                    System.out.println("322. add a student in the course");
+                    System.out.println("323. Add a faculty in the course");
+                    n = inp.nextInt();
+                    switch(n){
+                        case(331):
+                        {
+                            String id;
+                            inp.nextLine();
+                            System.out.println("Enter Course Id: ");
+                            id = inp.nextLine();
 
-                        if(cList.get(i).getCid().equals(id)){
-                            ind = i;
-                            f = 1;
-                            break;
+                            int ind = -1, f = 0;
+
+                            for(int i = 0; i < cList.size(); ++i){
+
+                                if(cList.get(i).getCid().equals(id)){
+                                    ind = i;
+                                    f = 1;
+                                    break;
+                                }
+                            }
+                            if(f == 1){
+                                cList.remove(ind);
+                            }else{  
+                                System.out.println("Course Id didn't matched");
+                            }
                         }
+                        case(332):
+                        {
+                            int id;
+//                            Will add sudent according to the Student ID:
+                            System.out.println("Enter Student Id: ");
+//                            id = inp.nextLine();
+                            
+                        }
+                        
+                        
                     }
-                    if(f == 1){
-                        cList.remove(ind);
-                    }else{  
-                        System.out.println("Course Id didn't matched");
-                    }
+                   
                     
                 }else if(n == 33){
                    int id;
